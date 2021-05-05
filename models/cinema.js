@@ -32,7 +32,10 @@ Cinema.prototype.checkLengthsOver = function (time) {
   return result;
 }
 
-
+Cinema.prototype.getTotalRuntime = function () {
+  const result = this.films.reduce((runningTotal, film) => runningTotal + film.length, 0);
+  return result;
+};
 
 
 module.exports = Cinema;
