@@ -39,7 +39,8 @@ describe('Cinema', function () {
   });
 
   it('should be able to filter films by genre', function () {
-    
+    const actual = cinema.filterByGenre('drama');
+    assert.deepStrictEqual(actual, [moonlight, trainspotting])
   });
 
   it('should be able to check whether there are some films from a particular year');
