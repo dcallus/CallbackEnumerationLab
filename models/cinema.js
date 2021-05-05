@@ -42,4 +42,10 @@ Cinema.prototype.filmsByProperty = function (property, value) {
   return result;
 };
 
+Cinema.prototype.filmsByMultipleProperties = function (firstProperty, firstValue, secondProperty, secondValue) {
+  const firstResult = this.filmsByProperty(firstProperty, firstValue);
+  const secondResult = firstResult.filter(film => film[secondProperty] === secondValue);
+  return secondResult;
+};
+
 module.exports = Cinema;
