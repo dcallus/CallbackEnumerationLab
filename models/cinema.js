@@ -17,6 +17,20 @@ Cinema.prototype.filterByGenre = function (genre) {
   return result;
 };
 
+Cinema.prototype.checkForYear = function (year) {
+  const result = this.films.some(film => film.year === year);
+  return result;
+};
+
+Cinema.prototype.checkForNoYear = function (year) {
+  const result = this.films.some(film => film.year === year);
+  return result;
+};
+
+Cinema.prototype.checkLengthsOver = function (time) {
+  const result = this.films.every(film => film.length > time);
+  return result;
+}
 
 
 
